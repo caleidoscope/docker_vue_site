@@ -16,14 +16,16 @@
 
             <b-button type="is-dark" @click="changeText">Dark</b-button>
 
-            <b-button type="is-text">Text</b-button>
+            <b-button type="is-text">{{envvar}}</b-button>
         </div>
 </template>
 
 <script>
 export default {
   data: ()=>{
-    return {message:'helloWorld'}
+    return {
+      message:'hello from World',
+      envvar: process.env.VUE_APP_TEST}
     },
   props: {
     msg: String
